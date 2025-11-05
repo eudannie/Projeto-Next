@@ -1,3 +1,9 @@
+"use client"
+
+import { useRouter } from "next/navigation"
+import { useEffect } from "react"
+import { useSession } from "next-auth/react"
+
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
@@ -15,6 +21,7 @@ import {
 } from "@/components/ui/sidebar"
 
 export default function Page() {
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -41,6 +48,7 @@ export default function Page() {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
+
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="bg-muted/50 aspect-video rounded-xl" />
